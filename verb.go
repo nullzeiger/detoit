@@ -41,6 +41,8 @@ func PrintVerb() {
 		"fahren":  "andare",
 	}
 
+	right := 0
+
 	for k, v := range verbs {
 		var guess string
 
@@ -53,9 +55,12 @@ func PrintVerb() {
 
 		if GuessVerb(guess, k, verbs) {
 			fmt.Printf("Giusto %s %s\n", k, v)
+			right++
 		} else {
 			fmt.Printf("Sbagliato %s %s\n", k, v)
 		}
 	}
+
+	fmt.Printf("Risposte giuste: %d su %d verbi", right, len(verbs))
 
 }
