@@ -11,11 +11,7 @@ import (
 )
 
 func GuessVerb(g string, k string, verbs map[string]string) bool {
-	if verbs[k] == g {
-		return true
-	}
-
-	return false
+	return verbs[k] == g
 }
 
 func PrintVerb() {
